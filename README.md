@@ -2,11 +2,30 @@
 
 This project uses a React frontend and a Flask backend containerized within Docker containers.
 
+## Prerequisites
+- Git
+- npm package manager
+- Internet
+
 ## Getting Started
 
-In order to setup the project, please run
+In order to setup the project, clone the repo
+```js
+$ git clone https://github.com/libkai/silver8Assessment.git
+```
 
-### `docker compose up`
+then 
+```js
+$ cd frontend/
+$ npm install
+$ cd ..
+```
+and finally
+
+```js
+$ docker compose build
+$ docker compose up
+```
 
 Which will build the required backend and frontend Docker containers.\
 Open [http://localhost:3000](http://localhost:3000) to view the project in your browser.
@@ -35,6 +54,8 @@ In the candlestick page, you will be able to select different granularities avai
 
 ## Testing Plan
 The testing plan could be found in the project directory under the name TestingPlan.xlsx
+
+Additionally, for continuous testing, use pytest to automate testing of the backend. And for React, use Jest to automate testing. Due to time constraints, these are not implemented.
 
 ## Backend API endpoints
 - /tradingPairs to obtain all products
